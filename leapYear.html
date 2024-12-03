@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>LeapYear</title>
+</head>
+
+<body>
+    <h1>A leap year is a year which has 366 days. The extra day is 29 February. There is a leap year every four years in
+        the
+        Western calendar. American English: leap yea</h1>
+    <script type="text/javascript">
+        function isLeapYear(year) {
+            if ((year % 4 === 0 && year % 100 !== 0) || (year % 400 === 0)) {
+                return `${year} is a leap year.`;
+            } else {
+                return `${year} is not a leap year.`;
+            }
+        }
+
+        var year = 2024;
+        document.write(isLeapYear(year));
+
+    </script>
+</body>
+
+</html>

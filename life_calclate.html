@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Life calculate</title>
+</head>
+
+<body>
+    <script type="text/javascript">
+        function lifeInWeeks(age) {
+            // Define the maximum lifespan
+            const maxAge = 90;
+
+            // Calculate the remaining years
+            const yearsLeft = maxAge - age;
+
+            // Calculate the remaining days, weeks, and months
+            const daysLeft = yearsLeft * 365;
+            const weeksLeft = yearsLeft * 52;
+            const monthsLeft = yearsLeft * 12;
+
+            // Output the result in the correct format
+            document.write(`You have ${daysLeft} days, ${weeksLeft} weeks, and ${monthsLeft} months left.`);
+        }
+        lifeInWeeks(20);
+    </script>
+</body>
+
+</html>

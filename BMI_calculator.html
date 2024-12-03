@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMI Calculator</title>
+</head>
+
+<body>
+    <script type="text/javascript">
+        function calculateBMI(weight, height) {
+            // Convert height from centimeters to meters
+            height = height / 100;
+            // BMI formula: weight (kg) / (height (m) * height (m))
+            var bmi = weight / (height * height);
+            return bmi.toFixed(2);
+        }
+        function interpretBMI(bmi) {
+            if (bmi < 18.5) {
+                return "Underweight";
+            } else if (bmi >= 18.5 && bmi < 24.9) {
+                return "Normal weight";
+            } else if (bmi >= 25 && bmi < 29.9) {
+                return "Overweight";
+            } else {
+                return "Obese";
+            }
+        }
+        let weight = 70; // in kilograms
+        let height = 175; // in centimeters
+
+        let bmi = calculateBMI(weight, height);
+        let result = interpretBMI(bmi);
+
+        document.write("Your BMI is: " + bmi + "<br>");
+        document.write("You are: " + result);
+
+    </script>
+</body>
+
+</html>
