@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demo of jQuery</title>
+    <!-- jQuery CDN -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+
+<body background="red">
+    <h1 id="heading">Hello jQuery</h1>
+    <button id="colorButton">Click me to change colors</button>
+
+    <script>
+        $(document).ready(function () {
+            $("#colorButton").click(function () {
+                // Change the heading's text color
+                $("#heading").css("color", "red");
+
+                // Change the button's background color
+                $(this).css("background-color", "green");
+
+                // Change the entire page's background color
+                $("body").css("background-color", "yellow");
+            });
+        });
+    </script>
+</body>
+
+</html>
